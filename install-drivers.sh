@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#!TODO(esth): update to work on Linux too
 curl -L http://chromedriver.storage.googleapis.com/2.41/chromedriver_mac64.zip -o chromedriver.zip
 unzip chromedriver.zip && rm chromedriver.zip
 echo ">>> Added Chrome"

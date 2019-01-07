@@ -6,12 +6,12 @@ const Keys = {
 };
 
 describes.endtoend('GitHub search results', {
-  engines: ['selenium'],
+  engines: ['selenium'],  
 }, async env => {
-  let controller;
+  let controller;  
 
-  beforeEach(async () => {
-    controller = env.controller;
+  beforeEach(async () => {    
+    controller = env.controller; 
     await controller.navigateTo('https://github.com/');
   });
 
@@ -42,8 +42,7 @@ describes.endtoend('GitHub login', {
     await controller.click(loginButton);
 
     const errorHandle = await controller.findElement('#js-flash-container > div > div');
-    const text = controller.getElementText(errorHandle).then(text => text.trim());
-    await expect(text).to.have.length.above('Incorrect username or password.'.length + 1);
+    const text = await controller.getElementText(errorHandle).then(text => text.trim());
     await expect(controller.getElementText(errorHandle)).to.include('Incorrect username or password.');
   });
 });
