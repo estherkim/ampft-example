@@ -11,6 +11,7 @@ describes.endtoend('GitHub search results', {
   let controller;  
 
   beforeEach(async () => {    
+    //TODO: get controller from single driver session
     controller = env.controller; 
     await controller.navigateTo('https://github.com/');
   });
