@@ -1,3 +1,4 @@
+import 'babel-regenerator-runtime';
 import * as describes from '../lib/describes';
 import {expect} from '../lib/expect';
 
@@ -11,7 +12,7 @@ describes.endtoend('GitHub search results', {
   let controller;  
 
   beforeEach(async () => {    
-    //TODO: get controller from single driver session
+    //TODO: get controller from single driver session    
     controller = env.controller; 
     await controller.navigateTo('https://github.com/');
   });
