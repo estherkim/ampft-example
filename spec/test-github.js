@@ -6,8 +6,7 @@ const Keys = {
   ENTER: 'enter',
 };
 
-describes.endtoend('GitHub search results', {
-  engines: ['selenium'],  
+describes.endtoend('GitHub search results', {  
 }, async env => {
   let controller;  
 
@@ -29,8 +28,7 @@ describes.endtoend('GitHub search results', {
   });
 });
 
-describes.endtoend('GitHub login', {
-  engines: ['selenium'],
+describes.endtoend('GitHub login', {  
 }, async env => {
   let controller;
 
